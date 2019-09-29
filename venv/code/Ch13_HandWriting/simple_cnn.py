@@ -53,6 +53,7 @@ def create_model():
 	return model
 	
 model = create_model()
+#将verbose设置为2，仅输出每个epoch的最终结果，忽略在每个epoch的详细内容
 model.fit(X_train, y_train, epochs=10, batch_size=200, verbose=2)
 
 score = model.evaluate(X_validation, y_validation, verbose=0)
